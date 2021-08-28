@@ -21,6 +21,6 @@ unzip -d /content/datasets/data/ data_all.zip
 ## Training ResNet50 on CUB with HGSL
 
 ```
-./train.sh
+bash train.sh
 ```
 
