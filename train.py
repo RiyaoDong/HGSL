@@ -174,7 +174,7 @@ class Easy_loss(torch.nn.Module):
         self.file_top_k = None
     def forward(self, features, labels, k):
         #_assert_no_grad(target)
-        self.file_top_k = k
+        #self.file_top_k = k
         batch_size = features.size(0)
         weights = torch.tensor(-1).float().cuda()
         loss_crossentropy = 0
@@ -545,8 +545,6 @@ def main():
     '''
     for epoch in range(epoches):
         
-        #k = 2 # - epoch // 4
-        #if epoch > 10:
         k = 1 
         train_acc, train_loss = train_2(model=model, train_loader=train_loader, criterion=criterion, optimizer=optimizer, Lambda=Lambda, k=k)
         print('%d\t%4.3f\t\t%4.2f%%\t' % (epoch, train_loss, train_acc))
