@@ -39,7 +39,7 @@ parser.add_argument('--gpu', dest='gpu', type=str, required=True)
 #parser.add_argument('--save_result_path', dest='save_result_path', type=str, default='model_resnet50_new')
 args = parser.parse_args()
 print(args)
-os.makedirs('Confusion5', exist_ok=True)
+os.makedirs('results', exist_ok=True)
 if args.data_name == 'CAR':
     num_class = 98
     IMAGENET_TRAINSET_SIZE = 8054
@@ -108,7 +108,7 @@ elif args.data_name == 'INSHOP':    # unfinish
 
 
 file_top_k = args.top_k if args.top_k!=0 else num_class
-args.save_result_path = 'Confusion5/%s_%s_%s_%d_%.2f' % (args.model_name, args.data_name, file_top_k, args.sigma, args.Lambda)
+args.save_result_path = 'results/%s_%s_%s_%d_%.2f' % (args.model_name, args.data_name, file_top_k, args.sigma, args.Lambda)
 args.model = os.path.join(args.save_result_path, 'best.pth')
 os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 
