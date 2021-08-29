@@ -23,3 +23,10 @@ unzip -d /content/datasets/data/ data_all.zip
 bash train.sh
 ```
 
+## Contact
+
+Feel free to discuss papers/code with us through issues/emails!
+
+wdecen@foxmail.com
+
+
