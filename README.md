@@ -1,6 +1,6 @@
 # HGSL
 
-Implementation of Hard global softmin loss for fine-grained object retrieval, which is proposed in [Improved Fine-Grained Object Retrieval with Hard Global Softmin Loss Objective](under review).
+Implementation of Hard global softmin loss for fine-grained object retrieval, which is proposed in [[Improved Fine-Grained Object Retrieval with Hard Global Softmin Loss Objective](https://www.sciencedirect.com/science/article/pii/S0923596521002514)].
 
 ## Requirements
 ```
